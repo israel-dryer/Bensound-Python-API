@@ -13,14 +13,14 @@ The main constructor for accessing the data from www.bensound.com. This API cont
 
 ### Attributes
 
-**BensoundAPI.channels** : `dict`  
-> contains all available channels and corresponding urls  
+**BensoundAPI.channels : *dict***  
+contains all available channels and corresponding urls  
 
-**BensoundAPI.channel_playlist** : `dict`  
-> contains all available channels and a list of songs tagged to each channel  
+**BensoundAPI.channel_playlist : *dict***  
+contains all available channels and a list of songs tagged to each channel  
 
-**BensoundAPI.music_list** : `dict`  
-> a list of dictionaries containing song objects extracted from www.bensound.com   
+**BensoundAPI.music_list : *dict***  
+a list of dictionaries containing song objects extracted from www.bensound.com   
 
 ### Methods
 

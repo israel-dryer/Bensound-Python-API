@@ -57,9 +57,21 @@ A container for the royalty free music extracted from www.bensound.com
 >the url of the artwork used for the wong on www.bensound.com  
   
 >**url_purchase : *str***   
->a url link for purchasing the song from www.bensound.com  
+>a url link for purchasing the song from www.bensound.com.  
   
 >**date_requested : *str***
->a string formatted date that shows the date of the request for data  
+>A string formatted date that shows the date of the request for data.  
   
 ### Methods
+
+>**properties()**  
+>Returns a dictionary containing all properties for a song; useful when uploading song properties to a database or json file.   
+
+>**get_song_stream()**  
+>Creates a streaming `BytesIO` object that can be used by an application for media playback.  
+
+>**get_song_art()**  
+>Creates an in-memory image object from the image url stored in the `url_image`.  
+
+>**download_mp3(destination=None)**  
+>Download the MP3 file from the URL stored in the `url_mp3` property. This is also the location that is used for MP3 playback. The file must be downloadable for this method to work. You can technically download any file that requires purchase, but it will include voice-over markers. You must purchase any music containing voiceovers from www.bensound.com to access the clean version of the song.  

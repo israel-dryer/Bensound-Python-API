@@ -20,7 +20,7 @@ a list of dictionaries containing song objects extracted from www.bensound.com
 ### Methods
 
 **get_channel_playlist(channel_name=None)**  
-Extracts the name of all channels with a list of associated songs  
+Extracts the name of all channels with a list of associated songs; accepts a valid channel name located in `channels`, or `None` to get data for all channels.  
 
 **get_channels()**  
 Extracts all available channels with a corresponding url  

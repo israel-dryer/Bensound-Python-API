@@ -1,6 +1,20 @@
 # Bensound-Python-API
 A Python API for accessing the music, metadata, and associated images from www.bensound.com.
 
+## Installation
+```
+pip install bensound
+```
+
+## Example usage
+
+**Extract music data** 
+```python
+from bensound import BensoundAPI
+
+api = BenssoundAPI()
+api.get_all_music()
+```
 
 
 ## BensoundAPI : *class*

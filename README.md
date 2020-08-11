@@ -12,7 +12,7 @@ pip install bensound
 ```python
 from bensound import BensoundAPI
 
-api = BenssoundAPI()
+api = BensoundAPI()
 api.get_all_music()
 ```
 

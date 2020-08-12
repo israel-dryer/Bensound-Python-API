@@ -21,23 +21,30 @@ The main constructor for accessing the data from www.bensound.com. This API cont
 
 ### Methods
 
->**get_channel_playlist(channel_name=None)**  
->Extracts the name of all channels with a list of associated songs; accepts a valid channel name located in `channels`, or `None` to get data for all channels.  
+>**get_channel_list()**  
+>A convience method to print a list of available channels.
 
->**get_channels()**  
->Extracts all available channels with a corresponding url.  
+>**get_song_list()**  
+>A convenience method to print a list of available song titles.    
 
->**get_all_music()**  
->Extracts all available music data from www.bensound.com and updates the class attributes `channels`, `channel_playlist`, and `music_list`.  
-
->**list_of_songs()**  
->A convenience method to print a list of song titles from the `music_list`.  
+>**get_songs_by_channel(channel_name=None)**   
+>Print a list of songs for a specified channel. If no channel is provided, then all channels will be printed with their corresponding playlist.  
 
 >**get_song_by_index(song_index)**  
 >Retrieve a song object by index; the index corresponds to the title index in the `music_list`, which you can also see by calling `list_of_songs()`.  
 
 >**get_song_by_title(song_title)**
 Retrieve a song object by finding the first song with the title matching `song_title`. This match is case-sensitive. Call the `list_of_songs()` method if you want to see what your options are.  
+
+>**extract_channels()**  
+>Extracts all available channels with a corresponding url.  
+
+>**extract_all_data()**  
+>Extracts all available music data from www.bensound.com and updates the class attributes `channels`, `channel_playlist`, and `music_list`. Does NOT download the MP3 files.  
+
+>**extract_channel_music(channel_name=None)**  
+>Extract song data for all songs in a specified channel, or returns all songs if no channel is provided.  
+
 
 ## Song : *class*
 A container for the royalty free music extracted from www.bensound.com.  
@@ -75,7 +82,7 @@ A container for the royalty free music extracted from www.bensound.com.
   
 ### Methods
 
->**properties()**  
+>**get_properties()**  
 >Returns a dictionary containing all properties for a song; useful when uploading song properties to a database or json file.   
 
 >**get_song_stream()**  

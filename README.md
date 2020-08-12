@@ -1,20 +1,8 @@
 # Bensound-Python-API
 A Python API for accessing the music, metadata, and associated images from www.bensound.com.
 
-## Installation
-```
-pip install bensound
-```
 
 ## Example usage
-
-**Extract music data** 
-```python
-from bensound import BensoundAPI
-
-api = BensoundAPI()
-api.get_all_music()
-```
 
 
 ## BensoundAPI : *class*
@@ -28,8 +16,8 @@ The main constructor for accessing the data from www.bensound.com. This API cont
 >**channel_playlist : *dict***  
 >Contains all available channels and a list of songs tagged to each channel.  
 
->**music_list : *dict***  
->A list of dictionaries containing song objects extracted from www.bensound.com.   
+>**music_list : *tuple***  
+>A tuple containing two lists; the first is a list of songs, and the second contains the song objects in the same order.     
 
 ### Methods
 
@@ -41,6 +29,15 @@ The main constructor for accessing the data from www.bensound.com. This API cont
 
 >**get_all_music()**  
 >Extracts all available music data from www.bensound.com and updates the class attributes `channels`, `channel_playlist`, and `music_list`.  
+
+>**list_of_songs()**  
+>A convenience method to print a list of song titles from the `music_list`.  
+
+>**get_song_by_index(song_index)**  
+>Retrieve a song object by index; the index corresponds to the title index in the `music_list`, which you can also see by calling `list_of_songs()`.  
+
+>**get_song_by_title(song_title)**
+Retrieve a song object by finding the first song with the title matching `song_title`. This match is case-sensitive. Call the `list_of_songs()` method if you want to see what your options are.  
 
 ## Song : *class*
 A container for the royalty free music extracted from www.bensound.com.  

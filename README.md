@@ -1,9 +1,7 @@
 # Bensound-Python-API
 A Python API for accessing the music, metadata, and associated images from www.bensound.com.
 
-
-## Example usage
-
+See the [Getting Started](https://github.com/israel-dryer/Bensound-Python-API/blob/master/bensound-getting-started.ipynb) notebook for some basic usage examples.
 
 ## BensoundAPI : *class*
 The main constructor for accessing the data from www.bensound.com. This API contains several methods which are useful for listening to, downloading, or purchasing music on the website. Download links are provided, and if the license is not FREE, a download link is provided as a song attribute.

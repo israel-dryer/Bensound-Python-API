@@ -16,7 +16,7 @@ The main constructor for accessing the data from www.bensound.com. This API cont
 >**channel_playlist : *dict***  
 >Contains all available channels and a list of songs tagged to each channel.  
 
->**music_list : *tuple***  
+>**music_lists : *tuple***  
 >A tuple containing two lists; the first is a list of songs, and the second contains the song objects in the same order.     
 
 ### Methods
@@ -31,16 +31,16 @@ The main constructor for accessing the data from www.bensound.com. This API cont
 >Print a list of songs for a specified channel. If no channel is provided, then all channels will be printed with their corresponding playlist.  
 
 >**get_song_by_index(song_index)**  
->Retrieve a song object by index; the index corresponds to the title index in the `music_list`, which you can also see by calling `list_of_songs()`.  
+>Retrieve a song object by index; the index corresponds to the title index in the `music_list`, which you can also see by calling `get_song_list()`.  
 
 >**get_song_by_title(song_title)**
-Retrieve a song object by finding the first song with the title matching `song_title`. This match is case-sensitive. Call the `list_of_songs()` method if you want to see what your options are.  
+Retrieve a song object by finding the first song with the title matching `song_title`. This match is case-sensitive. Call the `get_song_list()` method if you want to see what your options are.  
 
 >**extract_channels()**  
 >Extracts all available channels with a corresponding url.  
 
 >**extract_all_data()**  
->Extracts all available music data from www.bensound.com and updates the class attributes `channels`, `channel_playlist`, and `music_list`. Does NOT download the MP3 files.  
+>Extracts all available music data from www.bensound.com and updates the class attributes `channels`, `channel_playlist`, and `music_lists`. Does NOT download the MP3 files.  
 
 >**extract_channel_music(channel_name=None)**  
 >Extract song data for all songs in a specified channel, or returns all songs if no channel is provided.  
